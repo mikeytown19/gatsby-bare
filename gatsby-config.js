@@ -1,7 +1,8 @@
 // gatsby-config.js
-module.exports = {
-  plugins: [
+// module.exports = {
+//   plugins: [
+//     {
 
-
-  ],
-};
+//     }
+//   ],
+// };
