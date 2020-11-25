@@ -3,7 +3,6 @@ import {ChakraProvider, extendTheme, Container } from "@chakra-ui/react";
 import { Header } from './'
 
 
-
 const Layout = ({children}) => {
   const width = "1200px"
   return (

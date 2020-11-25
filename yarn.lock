@@ -1136,6 +1136,14 @@
   dependencies:
     "@chakra-ui/utils" "1.0.1"
 
+"@chakra-ui/icons@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.clearlink.com/@chakra-ui%2ficons/-/icons-1.0.1.tgz#834c2aa088c6f372c9d880330a2baa6dfd515bdd"
+  integrity sha512-LNUX/NRo/fcpXjJYn7UTeY/bOjrcbpdZ+mDSCVmdKTjD/27Co7fzHZABNHnpnM44WpI5CZqdVgY8Ebdr9gOdgQ==
+  dependencies:
+    "@chakra-ui/icon" "1.0.1"
+    "@types/react" "^16.9.53"
+
 "@chakra-ui/image@1.0.1":
   version "1.0.1"
   resolved "https://npm.clearlink.com/@chakra-ui%2fimage/-/image-1.0.1.tgz#6766a468a0d0ee8cf72b940d1c0b8f939e8fe9ad"
@@ -2152,6 +2160,14 @@
   version "17.0.0"
   resolved "https://npm.clearlink.com/@types%2freact/-/react-17.0.0.tgz#5af3eb7fad2807092f0046a1302b7823e27919b8"
   integrity sha512-aj/L7RIMsRlWML3YB6KZiXB3fV2t41+5RBGYF8z+tAKU43Px8C3cYUZsDvf1/+Bm4FK21QWBrDutu8ZJ/70qOw==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
+
+"@types/react@^16.9.53":
+  version "16.14.2"
+  resolved "https://npm.clearlink.com/@types%2freact/-/react-16.14.2.tgz#85dcc0947d0645349923c04ccef6018a1ab7538c"
+  integrity sha512-BzzcAlyDxXl2nANlabtT4thtvbbnhee8hMmH/CcJrISDBVcJS1iOsP1f0OAgSdGE0MsY9tqcrb9YoZcOFv9dbQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -5788,9 +5804,9 @@ fragment-cache@^0.2.1:
     map-cache "^0.2.2"
 
 framer-motion@^2.9.5:
-  version "3.0.0-rc.5"
-  resolved "https://npm.clearlink.com/framer-motion/-/framer-motion-3.0.0-rc.5.tgz#f51ef2891d5d7a384d9877f58e30ace732960dff"
-  integrity sha512-rFgqpwAJFHKudzf5o5EHdnMCuXQPOotZuprfmZWRYZ5KfXpTtdWLkf24UeWBU5cq/vi7hb+AE3sb8GW+8ayBFA==
+  version "3.0.0-rc.13"
+  resolved "https://npm.clearlink.com/framer-motion/-/framer-motion-3.0.0-rc.13.tgz#04e7ee738861ba989bf20a470bda3028f73aebfd"
+  integrity sha512-zFuqjF/DIqWSuV/aKtk7W64uKdgcyHvLJ/oT/4auKN/vh/QIzkMEWodGhx0TK1Ab3BbnQreE0M2pmcj4hYzG8Q==
   dependencies:
     framesync "^4.1.0"
     hey-listen "^1.0.8"
