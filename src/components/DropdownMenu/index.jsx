@@ -4,27 +4,28 @@ import {
   MenuList,
   MenuItem,
   MenuButton,
-  useDisclosure
+  useDisclosure,
+  Text
+
     } from "@chakra-ui/react"
 
   import { ChevronDownIcon } from "@chakra-ui/icons";
 
-const DropdownMenu = () => {
+const DropdownMenu = ({dropdownData, text}) => {
+console.log("🚀 ~ file: index.jsx ~ line 13 ~ DropdownMenu ~ dropdownData", dropdownData)
+
   const { isOpen, onOpen, onClose } = useDisclosure();
+  console.log(dropdownData)
   return (
     <Menu isOpen={isOpen} onClose={onClose}>
       <MenuButton
         onMouseOver={onOpen}
         rightIcon={<ChevronDownIcon />}
       >
-      Actions
+     <Text color="white">{text}</Text>
     </MenuButton>
     <MenuList onMouseLeave={onClose}>
-      <MenuItem>Download</MenuItem>
-      <MenuItem>Create a Copy</MenuItem>
-      <MenuItem>Mark as Draft</MenuItem>
-      <MenuItem>Delete</MenuItem>
-      <MenuItem>Attend a Workshop</MenuItem>
+      {dropdownData.map(item => <MenuItem key={item.text}>{item.text}</MenuItem>)}
     </MenuList>
   </Menu>
   )
