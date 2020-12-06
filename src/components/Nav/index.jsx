@@ -41,12 +41,12 @@ const Nav = ({maxWidthProp}) => {
             item.subNav ?
             <DropdownMenu  key={item.text} text={item.text} dropdownData={item.subNav}/>
             :
-            <NavLink key={item.text} url={item.url}>{item.text}</NavLink>
+            <NavLink color="white" key={item.text} url={item.url}>{item.text}</NavLink>
           )
         }
         </Box>
-        ) : <MobileNav>
-          ass
+        ) : <MobileNav navData={navData}>
+
         </MobileNav>
 
 
