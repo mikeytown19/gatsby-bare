@@ -6,10 +6,7 @@ import {
   MenuButton,
   useDisclosure,
   Text
-
     } from "@chakra-ui/react"
-
-  import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const DropdownMenu = ({dropdownData, text}) => {
 console.log("🚀 ~ file: index.jsx ~ line 13 ~ DropdownMenu ~ dropdownData", dropdownData)
@@ -20,7 +17,7 @@ console.log("🚀 ~ file: index.jsx ~ line 13 ~ DropdownMenu ~ dropdownData", dr
     <Menu isOpen={isOpen} onClose={onClose}>
       <MenuButton
         onMouseOver={onOpen}
-        rightIcon={<ChevronDownIcon />}
+
       >
      <Text color="white">{text}</Text>
     </MenuButton>

@@ -3,12 +3,15 @@ import React from 'react'
 import {
   Flex,
   Box,
-
+  useMediaQuery,
   Image,
   Container,
   } from "@chakra-ui/react"
 
+import { PhoneIcon, ChevronDownIcon } from '@chakra-ui/icons'
+
 import NavLink from './NavLink'
+import MobileNav from './MobileNav'
 import DropdownMenu from '../DropdownMenu'
 import {NAV_DATA} from './navData'
 
@@ -16,6 +19,8 @@ const {navData} = NAV_DATA
 
 
 const Nav = ({maxWidthProp}) => {
+  const [isLargerThan1080] = useMediaQuery("(min-width: 1080px)")
+
   return (
     <Container maxWidth={maxWidthProp}>
       <Flex
@@ -30,15 +35,22 @@ const Nav = ({maxWidthProp}) => {
           />
 
         </Flex>
+        { isLargerThan1080 ? (
         <Box>
           {navData && navData.map((item) =>
             item.subNav ?
-            <DropdownMenu key={item.text} text={item.text} dropdownData={item.subNav}/>
+            <DropdownMenu  key={item.text} text={item.text} dropdownData={item.subNav}/>
             :
             <NavLink key={item.text} url={item.url}>{item.text}</NavLink>
           )
         }
         </Box>
+        ) : <MobileNav>
+          ass
+        </MobileNav>
+
+
+      }
       </Flex>
     </Container>
 

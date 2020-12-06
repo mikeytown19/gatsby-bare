@@ -1534,6 +1534,11 @@
     "@emotion/weak-memoize" "^0.2.5"
     stylis "^4.0.3"
 
+"@emotion/core@^11.0.0":
+  version "11.0.0"
+  resolved "https://npm.clearlink.com/@emotion%2fcore/-/core-11.0.0.tgz#d075867e07864119de7cfd5268c15012bd2d6290"
+  integrity sha512-w4sE3AmHmyG6RDKf6mIbtHpgJUSJ2uGvPQb8VXFL7hFjMPibE8IiehG8cMX3Ztm4svfCQV6KqusQbeIOkurBcA==
+
 "@emotion/hash@0.8.0", "@emotion/hash@^0.8.0":
   version "0.8.0"
   resolved "https://npm.clearlink.com/@emotion%2fhash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
@@ -5804,9 +5809,9 @@ fragment-cache@^0.2.1:
     map-cache "^0.2.2"
 
 framer-motion@^2.9.5:
-  version "3.0.0-rc.13"
-  resolved "https://npm.clearlink.com/framer-motion/-/framer-motion-3.0.0-rc.13.tgz#04e7ee738861ba989bf20a470bda3028f73aebfd"
-  integrity sha512-zFuqjF/DIqWSuV/aKtk7W64uKdgcyHvLJ/oT/4auKN/vh/QIzkMEWodGhx0TK1Ab3BbnQreE0M2pmcj4hYzG8Q==
+  version "2.9.5"
+  resolved "https://npm.clearlink.com/framer-motion/-/framer-motion-2.9.5.tgz#bbb185325d531c57f494cf3f6cf7719fc2c225c7"
+  integrity sha512-epSX4Co1YbDv0mjfHouuY0q361TpHE7WQzCp/xMTilxy4kXd+Z23uJzPVorfzbm1a/9q1Yu8T5bndaw65NI4Tg==
   dependencies:
     framesync "^4.1.0"
     hey-listen "^1.0.8"
