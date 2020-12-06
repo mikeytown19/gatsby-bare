@@ -15,12 +15,12 @@ const theme = extendTheme({
 const Layout = ({children}) => {
   const width = "1200px"
   return (
-    <ChakraProvider theme={theme} >
+    <ChakraProvider  theme={theme} >
       <Header maxWidthProp={width}/>
-      <Container maxWidth={width}>
+
 
         {children}
-      </Container>
+
 
     </ChakraProvider>
   )
