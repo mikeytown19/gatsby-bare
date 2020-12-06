@@ -19,7 +19,7 @@ const variants = {
   close: { opacity: 0, x: "100%" },
 }
 
-const MobileNav = ({children, navData}) => {
+const MobileNav = ({navData}) => {
   console.log(navData)
   const [isOpen, setIsOpen] = useState(false)
   return (
@@ -28,14 +28,15 @@ const MobileNav = ({children, navData}) => {
         <HamburgerIcon color="white" boxSize={7}/>
       </Styled.Circle>
 
+    <Styled.Background  data-isOpen={isOpen}></Styled.Background>
     <Styled.Container
       initial={false}
       animate={isOpen ? "open" : "close"}
       variants={variants}
       transition={{type: "spring", mass: 0.5 }}
     >
-      <Styled.Circle onClick={() => setIsOpen(!isOpen)}  size="60px" bg="black" color="white">
-        <ArrowForwardIcon focusable={true} color="white" boxSize={7}/>
+      <Styled.Circle onClick={() => setIsOpen(!isOpen)}  size="30px" bg="black" color="white">
+        <ArrowForwardIcon focusable={true} color="white" boxSize={4}/>
       </Styled.Circle>
 
       <Flex mt={7} direction="column">

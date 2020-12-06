@@ -35,7 +35,7 @@ const Nav = ({maxWidthProp}) => {
           />
 
         </Flex>
-        { isLargerThan1080 ? (
+        {/* { isLargerThan1080 ? (
         <Box>
           {navData && navData.map((item) =>
             item.subNav ?
@@ -45,12 +45,13 @@ const Nav = ({maxWidthProp}) => {
           )
         }
         </Box>
-        ) : <MobileNav navData={navData}>
+        ) : */}
+         <MobileNav navData={navData}>
 
         </MobileNav>
 
 
-      }
+      {/* } */}
       </Flex>
     </Container>
 

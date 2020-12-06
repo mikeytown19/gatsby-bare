@@ -5,7 +5,7 @@ import {Nav} from '../'
 
 const Header = ({maxWidthProp}) => {
   return (
-    <Box bg="#6c63ff" w="100%" >
+    <Box bg="linear-gradient(to left,#6c63ff 4%,#afa2ff 97%)" w="100%" >
       <Nav  maxWidthProp={maxWidthProp}/>
     </Box>
   )
