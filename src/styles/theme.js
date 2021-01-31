@@ -32,14 +32,14 @@ export default {
     96, // 8
     128 // 9
   ] ,
-  breakpoints: [{
+  breakpoints: {
     xs: '480px',
     sm: '540px',
     md: '768px',
     lg: '940px',
     xl: '1200px',
     xxl: '1600px'
-  }],
+  },
   fontWeights: {
     light: 200,
     body: 400,
@@ -51,8 +51,8 @@ export default {
     heading: 1.25,
   },
 
+  // margin and padding
   space: [
-    // margin and padding
     0,
     4,
     8,
