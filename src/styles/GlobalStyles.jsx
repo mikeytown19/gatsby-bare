@@ -38,6 +38,8 @@ export const GlobalStyles = ({theme}) => (
           --color-primary: red;
           --color-text: teal;
 
+          --font-size: calc(1em * 2);
+
 
           /* SPACING  */
 
@@ -61,7 +63,6 @@ export const GlobalStyles = ({theme}) => (
           @media screen and (max-width: ${theme.breakpoints.md}) {
             --color-primary: blue;
             --font-size-6: ${theme.fontSizes[4]}px;
-            --spacing-1: ${theme.space[0]}px;
             --spacing-2: ${theme.space[0]}px;
             --spacing-3: ${theme.space[1]}px;
             --spacing-4: ${theme.space[2]}px;
@@ -69,6 +70,7 @@ export const GlobalStyles = ({theme}) => (
             --spacing-6: ${theme.space[4]}px;
             --spacing-7: ${theme.space[5]}px;
             --spacing-8: ${theme.space[6]}px;
+            --font-size: 1rem;
         }
      }
 

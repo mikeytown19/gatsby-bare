@@ -11,6 +11,7 @@ const Button = ({children}) => {
 
 export default Button
 
+
 export const Wrapper = styled.button`
   margin: 0;
   background-color: var(--color-text);
@@ -22,6 +23,7 @@ export const Wrapper = styled.button`
   padding-left: var(--spacing-5);
   padding-right: var(--spacing-5);
   font: inherit;
+  font-size: var(--font-size);
 
 
   border: 0;
