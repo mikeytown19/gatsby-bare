@@ -50,7 +50,7 @@ const Item = ({ title, isSelected, onHoverStart, hovered, subnav }) => {
         <Styled.MotionSelected
           layoutId="outline"
           initial={false}
-          // transition={spring}
+          transition={spring}
         >
           {subnav.map(({title}) =>
           <Styled.MotionA
