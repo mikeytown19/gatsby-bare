@@ -4,6 +4,10 @@ import {Global, css } from '@emotion/react'
 export const GlobalStyles = ({theme}) => (
   <Global
     styles={css`
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
 
         * {
           box-sizing: inherit;
@@ -29,33 +33,27 @@ export const GlobalStyles = ({theme}) => (
           font-family: "montserrat";
           --font-weight-medium: 400;
           --font-weight-bold: 600;
-          --font-size-1: ${theme.fontSizes[1]}px;
-          --font-size-2: ${theme.fontSizes[2]}px;
-          --font-size-3: ${theme.fontSizes[3]}px;
-          --font-size-4: ${theme.fontSizes[4]}px;
-          --font-size-5: ${theme.fontSizes[5]}px;
-          --font-size-6: ${theme.fontSizes[6]}px;
-          --color-primary: red;
+
+          ${theme.fontSizes.map((fontSize, index) => `--font-size-${index}: ${fontSize}px`)}
+
+
+          --color-primary: #0f0f0f0;
+          --bg-primary: tomato;
           --color-text: teal;
 
-          --font-size: calc(1em * 2);
 
 
           /* SPACING  */
-
-          --spacing-1: ${theme.space[0]}px;
-          --spacing-2: ${theme.space[1]}px;
-          --spacing-3: ${theme.space[2]}px;
-          --spacing-4: ${theme.space[3]}px;
-          --spacing-5: ${theme.space[4]}px;
-          --spacing-6: ${theme.space[5]}px;
-          --spacing-7: ${theme.space[6]}px;
-          --spacing-8: ${theme.space[7]}px;
-
+          ${theme.space.map((spc, index) => `--spacing-${index}: ${spc}px`)}
 
           //Radii
           --radius: ${theme.radii.default}px;
           --radius-circle: ${theme.radii.default}px;
+
+          //Shadows
+          --shadow-sm: ${theme.shadows.small};
+          --shadow-md: ${theme.shadows.med};
+          --shadow-lg: ${theme.shadows.large};
 
 
 
@@ -63,13 +61,6 @@ export const GlobalStyles = ({theme}) => (
           @media screen and (max-width: ${theme.breakpoints.md}) {
             --color-primary: blue;
             --font-size-6: ${theme.fontSizes[4]}px;
-            --spacing-2: ${theme.space[0]}px;
-            --spacing-3: ${theme.space[1]}px;
-            --spacing-4: ${theme.space[2]}px;
-            --spacing-5: ${theme.space[3]}px;
-            --spacing-6: ${theme.space[4]}px;
-            --spacing-7: ${theme.space[5]}px;
-            --spacing-8: ${theme.space[6]}px;
             --font-size: 1rem;
         }
      }

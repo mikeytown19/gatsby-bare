@@ -12,4 +12,6 @@ export default Wrapper
 
 const WrapperStyles = styled.div`
   display: block;
+  padding: 5px;
+
 `

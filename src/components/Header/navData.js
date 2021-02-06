@@ -1,0 +1,1 @@
+export const navData = ['Home', 'About', 'Work', 'Blog', 'Contact']
