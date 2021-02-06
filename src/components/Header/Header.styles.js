@@ -39,28 +39,60 @@ export const MotionUl = styled(motion.ul)`
 `
 
 export const MotionSelected = styled(motion.div)`
-            height: 300px;
-            position: absolute;
-            border-radius: 4px;
-            top: 65px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
-            background-color: white;
-            box-shadow: var(--shadow-md);
+      height: 300px;
+      position: absolute;
+      border-radius: 4px;
+      top: 45px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
 
-            &:before {
-              content: '';
-              position: absolute;
-              height: 20px;
-              width: 20px;
-              background-color: inherit;
-              top: -5px;
-              left: 0;
-              right: 0;
-              margin-left: auto;
-              margin-right: auto;
-              transform: rotate(-45deg);
-            }
+      background-color: white;
+      box-shadow: var(--shadow-md);
+      color: black;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      align-items: center;
+
+      a {
+        margin-top: 20px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: inherit;
+        top: -5px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        transform: rotate(-45deg);
+      }
+`
+
+export const MotionA = styled(motion.a)`
+  display: inline-block;
+  color: tomato;
+  margin-bottom: 2px;
+  text-decoration: none;
+
+  &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: tomato;
+      transition: width .2s;
+  }
+
+  &:hover::after {
+      width: 100%;
+  }
+
+
 
 `

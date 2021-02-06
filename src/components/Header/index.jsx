@@ -7,23 +7,26 @@ const Header = () => {
   let [selected, setSelected] = useState(navData[0])
   let [hovered, setHovered] = useState(false)
 
+
+
   return (
     <AnimateSharedLayout>
     <Styled.Header>
       <Styled.Container>
         <div className='logo'>logo</div>
-        <Styled.MotionDiv>
-          <Styled.MotionUl
-          onHoverStart={()=>setHovered(!hovered)}
-          onHoverEnd={()=>setHovered(!hovered)}>
-
-            {navData.map(item => (
+        <Styled.MotionDiv
+         onHoverStart={()=>setHovered(!hovered)}
+         onHoverEnd={()=>setHovered(!hovered)}
+        >
+          <Styled.MotionUl>
+            {navData.map(({title, subnav}, index) => (
               <Item
-                key={item}
+                key={`${title}${index}`}
                 hovered={hovered}
-                item={item}
-                isSelected={selected === item}
-                onHoverStart={() => setSelected(item)}
+                title={title}
+                subnav={subnav && subnav}
+                isSelected={selected === title}
+                onHoverStart={() => setSelected(title)}
               />
             ))}
 
@@ -35,17 +38,32 @@ const Header = () => {
   )
 }
 
-const Item = ({ item, isSelected, onHoverStart, hovered }) => {
+const Item = ({ title, isSelected, onHoverStart, hovered, subnav }) => {
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -100 },
+  }
   return (
-    <Styled.MotionItem className="item" onHoverStart={onHoverStart} style={{ backgroundColor: item }}>
-      {item}
+    <Styled.MotionItem className="item" onHoverStart={onHoverStart} style={{ backgroundColor: title }}>
+      {title}
       {isSelected && hovered && (
         <Styled.MotionSelected
           layoutId="outline"
           initial={false}
-
-          transition={spring}
-        />
+          // transition={spring}
+        >
+          {subnav.map(({title}) =>
+          <Styled.MotionA
+            animate={hovered ? "visible" : "hidden"}
+            variants={variants}
+            key={title}
+            initial={"hidden"}
+            transition={{ delay: .08 }}
+          >
+            {title}
+          </Styled.MotionA>
+          )}
+        </Styled.MotionSelected>
       )}
     </Styled.MotionItem>
   );
