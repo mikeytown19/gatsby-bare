@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import * as Styled from './Header.styles'
 import { AnimateSharedLayout } from 'framer-motion'
 import {navData} from './navData'
+import Logo from '../../images/logo.svg'
 
 const Header = () => {
   let [selected, setSelected] = useState(navData[0])
@@ -13,7 +14,9 @@ const Header = () => {
     <AnimateSharedLayout>
     <Styled.Header>
       <Styled.Container>
-        <div className='logo'>logo</div>
+        <Styled.MotionDiv className="logo">
+          <Logo />
+        </Styled.MotionDiv>
         <Styled.MotionDiv
          onHoverStart={()=>setHovered(!hovered)}
          onHoverEnd={()=>setHovered(!hovered)}
@@ -40,8 +43,8 @@ const Header = () => {
 
 const Item = ({ title, isSelected, onHoverStart, hovered, subnav }) => {
   const variants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
   }
   return (
     <Styled.MotionItem className="item" onHoverStart={onHoverStart} style={{ backgroundColor: title }}>

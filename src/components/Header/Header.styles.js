@@ -3,13 +3,43 @@ import {motion} from 'framer-motion'
 
 
 export const MotionDiv = styled(motion.div)`
-color: white;
+   @keyframes offset {
+      100% {
+        stroke-dashoffset: 1;
+      }
+
+    }
+
+    @keyframes fill-it {
+      100%{
+        fill: tomato;
+      }
+    }
+
+  &.logo {
+    svg {
+      width: 110px;
+      fill: transparent;
+
+      path {
+        stroke: tomato;
+        stroke-width: 1;
+        stroke-dasharray: 800;
+
+
+        stroke-dashoffset: 800;
+        animation: offset .5s linear forwards, fill-it .8s .5s forwards
+      }
+
+    }
+  }
 `
 
 export const MotionItem = styled(motion.li)`
   padding: 10px 20px;
   margin: 0 5px;
   position: relative;
+  color: var(--color-primary);
   &:hover {
     cursor: pointer;
   }
@@ -17,10 +47,8 @@ export const MotionItem = styled(motion.li)`
 `
 
 export const Header = styled.nav`
-  color: var(--color-primary);
   width: 100%;
-  background-color: var(--bg-primary);
-  height: 50px;
+  height: 100px;
 `
 
 export const Container = styled.div`
@@ -36,6 +64,7 @@ export const MotionUl = styled(motion.ul)`
       list-style: none;
       display: flex;
       position: relative;
+
 `
 
 export const MotionSelected = styled(motion.div)`
@@ -49,7 +78,7 @@ export const MotionSelected = styled(motion.div)`
 
       background-color: white;
       box-shadow: var(--shadow-md);
-      color: black;
+
       display: flex;
       flex-direction: column;
       padding: 10px;

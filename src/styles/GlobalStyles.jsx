@@ -37,7 +37,7 @@ export const GlobalStyles = ({theme}) => (
           ${theme.fontSizes.map((fontSize, index) => `--font-size-${index}: ${fontSize}px`)}
 
 
-          --color-primary: #0f0f0f0;
+          --color-primary: tomato;
           --bg-primary: tomato;
           --color-text: teal;
 
